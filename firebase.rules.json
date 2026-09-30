@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "rooms": {
+      "$room": {
+        ".read": "auth != null && $room.matches(/^[0-9]{6}$/)",
+        ".write": "auth != null && $room.matches(/^[0-9]{6}$/)",
+        "players": {
+          "$uid": {
+            ".write": "auth != null && $uid === auth.uid"
+          }
+        }
+      }
+    }
+  }
+}
