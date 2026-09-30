@@ -21,9 +21,6 @@ const firebaseConfig = {
   appId: "1:343509428835:web:173ffd2dc94239f311a656"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
 const ROWS = 31, COLS = 17, MINES = 150;
 let app, auth, db, currentUid = null, currentRoom = null, currentNick = null;
 let unsubscribeRoom = null, selectedCell = null, roomState = null;
