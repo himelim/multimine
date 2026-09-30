@@ -9,15 +9,24 @@ import { getDatabase, ref, get, set, update, onValue, runTransaction, onDisconne
 // ============================================================
 // ★ Firebase Console에서 받은 값을 여기에 붙여 넣으세요.
 // ============================================================
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "여기에_apiKey",
-  authDomain: "여기에_authDomain",
-  databaseURL: "여기에_databaseURL",
-  projectId: "여기에_projectId",
-  storageBucket: "여기에_storageBucket",
-  messagingSenderId: "여기에_messagingSenderId",
-  appId: "여기에_appId"
+  apiKey: "AIzaSyATN0RAboQ4C4CFbaCMQ6OVI-aFTdCAX0I",
+  authDomain: "mulmi-a0342.firebaseapp.com",
+  databaseURL: "https://mulmi-a0342-default-rtdb.firebaseio.com",
+  projectId: "mulmi-a0342",
+  storageBucket: "mulmi-a0342.firebasestorage.app",
+  messagingSenderId: "343509428835",
+  appId: "1:343509428835:web:173ffd2dc94239f311a656"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 const ROWS = 31, COLS = 17, MINES = 150;
 let app, auth, db, currentUid = null, currentRoom = null, currentNick = null;
